@@ -751,6 +751,10 @@ namespace Microsoft.Azure.WebJobs.Script
                     case ScriptConstants.JavaLanguageWrokerName:
                         providers.Add(new JavaWorkerProvider());
                         break;
+                    case "go":
+                    case "golang":
+                        providers.Add(new GoWorkerProvider());
+                        break;
                     case ScriptConstants.DotNetLanguageWorkerName:
                         // No-Op
                         break;
